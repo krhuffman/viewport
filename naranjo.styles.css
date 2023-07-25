@@ -156,7 +156,7 @@ p, small{
     font-size: 1em;
     margin: 0.25em;
     padding: 0.25em;
-    max-width: 75ch;
+    width: 75ch;
 }
 
 /* ----- MAIN/HEADER/FOOTER ----- */
@@ -181,6 +181,7 @@ section{
 }
 
 /* ---------- EXTRA SMALL SCREEN STYLES ---------- */
+@media screen and (min-width: 350px) {
 header, footer{
     background-color: var(--pink);
     color: var(--white);
@@ -195,6 +196,11 @@ img{
     margin: 0.75em 0.75em 0.75em 0;
     display: inline;
     float: left;
+}
+
+p{
+    width: 100%;
+}
 }
 
 
@@ -223,6 +229,14 @@ img{
         grid-column: 1/3;
     }
 
+    #three, #four, #five, #six{
+        grid-column: 1/3;
+    }
+
+    p{
+        width: 100%;
+    }
+    
     img{
         width: 200px;
         max-width: 200px;
@@ -234,7 +248,7 @@ img{
 
 /* ---------- MEDIUM SCREEN STYLES ---------- */
 /* --------------- BEGIN MEDIUM SCREEN SIZES --------------- */
-@media screen and (min-width(750px)){
+@media screen and (min-width: 750px){
     header, footer{
         background-color: var(--black);
         color: var(--white);
@@ -249,18 +263,48 @@ img{
     }
 
     #one{
-        grid-column: 1/3;
+        grid-column: 1/4;
+        grid-row: 1/2;
     }
 
     #two{
+        grid-column: 1/4;
+        grid-row: 2/3;
+    }
+
+    #three{
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    #four{
+        grid-column: 2/4;
+        grid-row: 3/4;
+    }
+
+    #five{
+        grid-column: 1/3;
+        grid-row: 4/5;
+    }
+
+    #six{
         grid-column: 3/4;
-        grid-row: 1/3;
+        grid-row: 4/5;
     }
 
     #seven{
-        grid-column: 3/4;
-        grid-row: 3/5;
+        grid-column: 1/4;
+        grid-row: 5/6;
     } 
+
+    #eight{
+        grid-column: 1/4;
+        grid-row: 6/7;
+    }
+
+    p{
+        width: 100%;
+    }
 }
 /* --------------- END MEDIUM SCREEN SIZES --------------- */
 
@@ -268,7 +312,7 @@ img{
 
 /* ---------- LARGE SCREEN STYLES ---------- */
 /* --------------- BEGIN LARGE SCREEN SIZES --------------- */
-@media screen and (min-width(1200px)){
+@media screen and (min-width: 1200px){
     header, footer{
         background-color: var(--lime-green);
         color: var(--dark-gray);
@@ -287,20 +331,53 @@ img{
     }
 
     #one, #seven{
+        grid-column: 1/5;
+    }
+
+    #one{
+        grid-row: 1/2;
+    }
+    
+    #two{
+        grid-row: 2/3;
+    }
+
+    #three{
         grid-column: 1/3;
     }
 
-    #two{
-        grid-row: 1/2;
-    }
-
-    #two, #eight{
+    #four{
         grid-column: 3/5;
     }
 
-    #seven, #eight{
+    #three, #four{
         grid-row: 3/4;
     }
+
+    #five{
+        grid-column: 1/3;
+    }
+
+    #six{
+        grid-column: 3/5;
+    }
+
+    #five, #six{
+        grid-row: 4/5;
+    }
+
+    #two, #eight{
+        grid-column: 1/5;
+    }
+
+    #seven, #eight{
+        grid-row: 5/6;
+    }
+
+    #eight{
+        grid-row: 6/7;
+    }
+
 }
 /* --------------- END LARGE SCREEN SIZES --------------- */
 
@@ -318,7 +395,7 @@ img{
 
 /* ---------- EXTRA LARGE SCREEN STYLES ---------- */
 /* --------------- BEGIN EXTRA LARGE SCREEN SIZES --------------- */
-@media screen and (min-width(1500px)) {
+@media screen and (min-width: 1500px) {
     header, footer{
         background-color: var(--orange);
         padding-left: 5%;
@@ -384,6 +461,10 @@ img{
 
     #three p, #four p, #five p, #six p{
         padding-top: 2em;
+    }
+
+    p{
+        width: 100%;
     }
 }
 /* --------------- END EXTRA LARGE SCREEN SIZES --------------- */
